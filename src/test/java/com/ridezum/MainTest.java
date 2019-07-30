@@ -38,6 +38,6 @@ public abstract class MainTest {
     @After
     public void quit(){
         System.out.println("Finish");
-//        driver.quit();
+        driver.quit();
     }
 }
