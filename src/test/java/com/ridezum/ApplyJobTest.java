@@ -3,7 +3,11 @@ package com.ridezum;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.logging.Logger;
+
 public class ApplyJobTest extends MainTest {
+
+    private static Logger log = Logger.getLogger(ApplyJobTest.class.getName());
 
     private HomePage homePage;
     private CareerPage careerPage;
@@ -46,7 +50,7 @@ public class ApplyJobTest extends MainTest {
         submitYourApplicationPage.clickSubmitButton();
 
         String errorMessage = submitYourApplicationPage.getErrorMissageAttachResume();
-        System.out.println(errorMessage);
+        log.info("Error message: " + errorMessage);
         Assert.assertEquals("✱ Please attach a resume", errorMessage);
 
         // close current window(tab)
@@ -55,6 +59,7 @@ public class ApplyJobTest extends MainTest {
         // Switch back
         driver.switchTo().window(windowHandlBefore);
 
-
+        //new code
+        //new code
     }
 }

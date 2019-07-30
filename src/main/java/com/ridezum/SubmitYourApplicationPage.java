@@ -61,7 +61,7 @@ public class SubmitYourApplicationPage extends BasePage {
     public void selectGender(){
         wait.until(ExpectedConditions.elementToBeClickable(selectGenderDropDownList));
         Select select = new Select(selectGenderDropDownList);
-        select.selectByValue("Male");
+        select.selectByIndex(2);
     }
 
     public void inputPhone(String phone){
